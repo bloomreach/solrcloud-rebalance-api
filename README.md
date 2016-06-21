@@ -34,7 +34,7 @@ seamlessly fit inside the Rebalance paradigm.
 | /admin/collections?**action**=REBALANCE&**scaling_strategy**=SCALE_UP     | Increases the number of replicas on shards   |
 | /admin/collections?**action**=REBALANCE&**scaling_strategy**=SCALE_DOWN   | Decreases the number of replicas on shards   |
 | /admin/collections?**action**=REBALANCE&**scaling_strategy**=SMART_MERGE_DISTRIBUTED |  Distributed Merge of solr cores  |
-| /admin/collections?**action**=REBALANCE&**scaling_strategy**=REDISTRIBUTEALL   | Redistributes all collections           |
+| /admin/collections?**action**=REDISTRIBUTEALL   | Redistributes all collections           |
 
 
 # Scaling Strategies
