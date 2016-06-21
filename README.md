@@ -70,7 +70,8 @@ Automatically re-shards a given collection in the desired number of shards based
    ![Alt text](/1.png?raw=true "AutoShard Example Default")
 
   **Command**:  
-  ```/solr/admin/collections?action=REBALANCE&scaling_strategy=AUTO_SHARD&collection=suruchi_test_collection&num_shards=4```
+  ```/solr/admin/collections?action=REBALANCE&scaling_strategy=AUTO_SHARD&collection=suruchi_test_collection&num_shards=4
+  ```
 
   **After**:  
     ![Alt text](/2.png?raw=true "AutoShard Example After")
@@ -80,7 +81,8 @@ Automatically re-shards a given collection in the desired number of shards based
    ![Alt text](/4.png?raw=true "AutoShard Example With Allocation")
 
   **Command**:  
-   ```/solr/admin/collections?action=REBALANCE&scaling_strategy=AUTO_SHARD&collection=nitin_test_collection&num_shards=4&allocation_strategy=least_used```
+   ```/solr/admin/collections?action=REBALANCE&scaling_strategy=AUTO_SHARD&collection=nitin_test_collection&num_shards=4&allocation_strategy=least_used
+   ```
 
   **After**:  
     ![Alt text](/3.png?raw=true "AutoShard Example After Allocation")
@@ -105,7 +107,8 @@ Automatically re-shards a given collection in the desired number of shards based
    ![Alt text](/5.png?raw=true "Re-distribute Example Default")
 
   **Command**:  
-    ```/solr/admin/collections?action=REBALANCE&scaling_strategy=REDISTRIBUTE&collection=nitin_test_collection_rebalanced```
+    ```/solr/admin/collections?action=REBALANCE&scaling_strategy=REDISTRIBUTE&collection=nitin_test_collection_rebalanced
+    ```
 
   **After**:  
     ![Alt text](/6.png?raw=true "Redistribute Example After")
