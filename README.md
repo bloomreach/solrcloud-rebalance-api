@@ -125,7 +125,8 @@ Automatically re-shards a given collection in the desired number of shards based
 
 ### Smart Merge Distributed  
 
-Dynamically merge cores from a given collection x to a new collection y by distributing the workload across machines in the cluster  
+Dynamically merge cores from a given collection x to a new collection y by distributing the workload across machines in the cluster.
+There are cases where we might want to have a different setup for indexing vs serving. Indexing can have 40 shards (for throughput) and serving can just have 5 (for latency reasons). This api will come in handy to merge data from an indexing setup to a serving setup. (larger to smaller).  
 
 /admin/collections?**action**=REBALANCE    
 &**scaling_strategy**=SMART_MERGE_DISTRIBUTED  
@@ -143,6 +144,19 @@ Dynamically merge cores from a given collection x to a new collection y by distr
 | num_shards       | int     | Yes       | Number of shards of the destination collection |
 | num_replicas     | int     | No        | Number of replicas per shard                   |
 | bucketize        | boolean | Yes       | true                                           |
+
+**Example 1**:
+
+  **Before**:  
+   ![Alt text](/12.png?raw=true "Merge Example Default")
+
+  **Command**:  
+
+  /solr/admin/collections?action=REBALANCE&scaling_strategy=SMART_MERGE_DISTRIBUTED&collection=test_collection&num_shards=4&bucketize=true
+
+  **After**:  
+    ![Alt text](/14.png?raw=true "Merge Example After")
+
 
 ### Scale Up
 
