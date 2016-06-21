@@ -64,7 +64,7 @@ Automatically re-shards a given collection in the desired number of shards based
 | dest_collection  | string  | No        | The name of the destination collection with the new sharding setup. The default name is originalCollectionName_rebalanced                                                                                         |
 | allocation_strategy | string | No      | <unused/least_used> values. The allocation strategy defines WHERE the new nodes reside. If least_used strategy is selected, amongst all nodes, the node with least number of index data segments is selected. If unused strategy is selected, amongst all nodes,the node which has NOT been used for a given collection is selected. The default allocation strategy is least_used|
 
- **Example 1**:  [With default allocation strategy]
+ **Example 1**:  [With default allocation strategy]  
 
   **Before**:  
    ![Alt text](/1.png?raw=true "AutoShard Example Default")
