@@ -70,7 +70,8 @@ Automatically re-shards a given collection in the desired number of shards based
    ![Alt text](/1.png?raw=true "AutoShard Example Default")
 
   **Command**:  
-  ```/solr/admin/collections?action=REBALANCE&scaling_strategy=AUTO_SHARD&collection=suruchi_test_collection&num_shards=4
+  ```
+  /solr/admin/collections?action=REBALANCE&scaling_strategy=AUTO_SHARD&collection=suruchi_test_collection&num_shards=4
   ```
 
   **After**:  
@@ -81,7 +82,8 @@ Automatically re-shards a given collection in the desired number of shards based
    ![Alt text](/4.png?raw=true "AutoShard Example With Allocation")
 
   **Command**:  
-   ```/solr/admin/collections?action=REBALANCE&scaling_strategy=AUTO_SHARD&collection=nitin_test_collection&num_shards=4&allocation_strategy=least_used
+   ```
+  /solr/admin/collections?action=REBALANCE&scaling_strategy=AUTO_SHARD&collection=nitin_test_collection&num_shards=4&allocation_strategy=least_used
    ```
 
   **After**:  
@@ -107,7 +109,8 @@ Automatically re-shards a given collection in the desired number of shards based
    ![Alt text](/5.png?raw=true "Re-distribute Example Default")
 
   **Command**:  
-    ```/solr/admin/collections?action=REBALANCE&scaling_strategy=REDISTRIBUTE&collection=nitin_test_collection_rebalanced
+    ```
+    /solr/admin/collections?action=REBALANCE&scaling_strategy=REDISTRIBUTE&collection=nitin_test_collection_rebalanced
     ```
 
   **After**:  
@@ -158,7 +161,9 @@ There are cases where we might want to have a different setup for indexing vs se
 
   **Command**:  
 
-  ```/solr/admin/collections?action=REBALANCE&scaling_strategy=SMART_MERGE_DISTRIBUTED&collection=test_collection&num_shards=4&bucketize=true```
+  ```
+   /solr/admin/collections?action=REBALANCE&scaling_strategy=SMART_MERGE_DISTRIBUTED&collection=test_collection&num_shards=4&bucketize=true
+  ```
 
   **After**:  
     ![Alt text](/14.png?raw=true "Merge Example After")
@@ -188,7 +193,9 @@ Dynamically increases the number of replicas for a given collection on the nodes
 
   **Command**:  
 
-    ```/solr/admin/collections?action=REBALANCE&scaling_strategy=SCALE_UP&collection=suruchi_test_collection&num_replicas=1```
+    ```
+     /solr/admin/collections?action=REBALANCE&scaling_strategy=SCALE_UP&collection=suruchi_test_collection&num_replicas=1
+    ```
 
   **After**:  
     ![Alt text](/8.png?raw=true "Scale Up Example After")
@@ -218,7 +225,9 @@ Decreases the number of replicas for a given collection. If it is the only repli
 
   **Command**:    
 
-   ```/solr/admin/collections?action=REBALANCE&scaling_strategy=SCALE_DOWN&collection=suruchi_test_collection&num_replicas=1```
+   ```
+   /solr/admin/collections?action=REBALANCE&scaling_strategy=SCALE_DOWN&collection=suruchi_test_collection&num_replicas=1
+   ```
  
   **After**:    
     ![Alt text](/10.png?raw=true "Scale Down Example After")
