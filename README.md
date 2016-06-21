@@ -4,6 +4,10 @@ This document will focus purely on the API Specification.
 
 Internals of the Rebalance API:  http://engineering.bloomreach.com/solrcloud-rebalance-api/
 
+# Authors  
+ Nitin Sharma
+ Suruchi Shah
+
 
 # API Specification
   Rebalance API allows two major constructs in its API 
