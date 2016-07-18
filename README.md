@@ -121,15 +121,17 @@ Automatically re-shards a given collection in the desired number of shards based
   REPLACE option will automatically migrate all the cores (shards and replicas)  for that collection from one node to another node  
   		
   /admin/collections?action=REBALANCE  		
-  &**scaling_strategy**=REDISTRIBUTE  		
+  &**scaling_strategy**=REPLACE
   &**collection**=collectionName  		
+  &**source_node**=source_host
+  &**dest_node**=dest_host
  		
 | Key              | Type   | Required  | Description                                 |
 |------------------|--------|-----------|---------------------------------------------|
 | scaling_strategy | string | Yes       | Exact value to set: REPLACE                 |
 | collection       | string | Yes       | The name of the collection to be re-sharded |
-| source_host      | string | Yes       | The name of the source host to be replaced |
-| destination_host | string | Yes       | The name of the destination host to place new cores|
+| source_node      | string | Yes       | The name of the source host to be replaced |
+| destination_node | string | Yes       | The name of the destination host to place new cores|
 
 
 ### Smart Merge Distributed  
